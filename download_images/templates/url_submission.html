@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<title>{% block title %} Downloaded Images  {% endblock %}</title>
+
+{% block body %}
+<div class = "w3-container">
+  <a href = {{ url_for("download_images.home") }} class="w3-button w3-blue"> < Home </a>
+  <p></p>
+  <div class="w3-container w3-center">
+    {% for image in images %}
+        <img src="{{ image }}" class="w3-round" width="200" height="150">
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

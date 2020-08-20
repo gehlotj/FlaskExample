@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<title> {% block title %} Download Images from URL {% endblock %}</title>
+  {% block body %}
+
+    <div class="w3-container">
+      <form class="w3-container w3-card-4 w3-center" action='/url_submission' method="post">
+        <p><label class="w3-text-blue">Enter your URL </label></p>
+        <p><input class="w3-input w3-border" value = " " type="url" name="url_name" required \></p>
+        <p><button class="w3-btn w3-blue"  type="submit" \>Submit</button></p>
+      </form>
+      <p>
+
+      <!-- History Data -->
+      <h5> Past Searches </h5>
+      <ul class="w3-ul w3-card-4 w3-center" style="width:30%">
+      {% for s in history %}
+        <li>{{ s }}</li>
+      {% endfor %}
+    </div>
+
+  {%endblock%}
