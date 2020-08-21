@@ -2,7 +2,7 @@
 The example demonstrate creating Web API with Flask & Python.
 
 ## download_images:
-Presents all the jpg, jpeg and  png file from URL.
+Download all the jpg, jpeg and  png file from the URL passed.
 
 ## API usage:
 *Retrieve Images from URL:*
