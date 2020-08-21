@@ -1,4 +1,4 @@
-from flask import render_template, url_for, request, flash, session, make_response, Blueprint
+from flask import render_template, url_for, request, flash, session, make_response, Blueprint, jsonify
 from bs4 import BeautifulSoup
 from download_images.image_url import GetImageURL
 
@@ -28,3 +28,15 @@ def url_submission():
     else:
         flash("The page is not accessible. Resubmit the form")
         return render_template("error.html")
+
+
+@di.route("/api",methods=['GET'])
+def api():
+    return render_template("api.html")
+
+
+@di.route("/get_images/<string:url>", methods = ['GET','POST'])
+def get_images(url:str):
+    url = 'http://'+url
+    images = GetImageURL(url).get_images_from_url()
+    return jsonify(result=images),200

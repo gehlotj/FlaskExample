@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+<title> {% block title %} Download Images - API Resources {% endblock %}</title>
+{% block body %}
+<div class = "w3-container">
+  <a href = {{ url_for("download_images.home") }} class="w3-button w3-blue"> < Home </a>
+  <p></p>
+  <div class="w3-code">
+     <h3>Retrieve Images from URL:</h3><br>
+     <i>GET</i> /get_images/<u>URL</u>
+     <p>For ex: http://127.0.0.1:5000/get_images/yahoo.com</p>
+  </div>
+</div>
+{% endblock %}
