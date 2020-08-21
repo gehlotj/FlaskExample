@@ -8,8 +8,9 @@ Presents all the jpg, jpeg and  png file from URL.
 *Retrieve Images from URL:*
 For ex: `http://127.0.0.1:5000/get_images/yahoo.com`
 
-## Basic Usage:
+## Program Execution:
 `export FLASK_APP=download_images`
+
 `flask run`
 
 ## Screenshot
